@@ -13,6 +13,46 @@ import { Link } from "react-router-dom";
 import "../../styles/Headerstyles.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { styled } from "@mui/material/styles";
+
+// Color button
+
+const ColorButton = styled(Button)({
+  boxShadow: "none",
+  textTransform: "none",
+  fontSize: 17,
+  padding: "6px 12px",
+  border: "1px solid",
+  lineHeight: 1.5,
+  backgroundColor: "#81c700",
+  borderColor: "#81c700",
+  fontFamily: [
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    backgroundColor: "#ffffff",
+    borderColor: "#ffffff",
+    boxShadow: "0 0 0 0.2rem #81c700",
+    color: "black",
+  },
+  "&:active": {
+    boxShadow: "none",
+    backgroundColor: "#d6d6d6",
+    borderColor: "#d6d6d6",
+  },
+  "&:focus": {
+    boxShadow: "0 0 0 0.2rem #81c700",
+  },
+});
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -40,10 +80,22 @@ const Header = () => {
       </Typography>
       <ul className="mobile-navigation">
         <li>
-          <Link to={"/"}>Home</Link>
+          <Link to={"/"} underline="hover">
+            Home
+          </Link>
         </li>
         <li>
           <Link to={"/menu"}>Menu</Link>
+        </li>
+        <li>
+          <Link to={"/catering"}>Catering</Link>
+        </li>
+        <Divider sx={{ my: 5 }} />
+        <li>
+          <Link to={"/blog"}>Blog</Link>
+        </li>
+        <li>
+          <Link to={"/help"}>Help</Link>
         </li>
         <li>
           <Link to={"/about"}>About</Link>
@@ -54,10 +106,11 @@ const Header = () => {
       </ul>
     </Box>
   );
+
   return (
     <>
       <Box>
-        <AppBar component={"nav"} sx={{ bgcolor: "black" }}>
+        <AppBar component={"nav"} sx={{ bgcolor: "white" }}>
           <Toolbar>
             <IconButton
               color="inherit"
@@ -99,6 +152,15 @@ const Header = () => {
                   <Link to={"/menu"}>Menu</Link>
                 </li>
                 <li>
+                  <Link to={"/catering"}>Catering</Link>
+                </li>
+                <li>
+                  <Link to={"/blog"}>Blog</Link>
+                </li>
+                <li>
+                  <Link to={"/help"}>Help</Link>
+                </li>
+                <li>
                   <Link to={"/about"}>About</Link>
                 </li>
                 <li>
@@ -109,10 +171,13 @@ const Header = () => {
             <Box>
               <ul className="navigation-menu">
                 <li>
+                  <ColorButton variant="contained">Order Now</ColorButton>
+                </li>
+                {/* <li>
                   <Button variant="contained" color="success">
                     <Link to={"/ordernow"}>Order Now</Link>
                   </Button>
-                </li>
+                </li> */}
               </ul>
             </Box>
           </Toolbar>

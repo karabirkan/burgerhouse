@@ -11,7 +11,9 @@
 
 .navigation-menu li a {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .burgerhouse {
@@ -27,6 +29,10 @@
 
 .mobile-navigation li {
   margin-top: 20px;
+}
+
+.mobile-navigation li link:hover {
+  color: pink;
 }
 
 .mobile-navigation li a {
