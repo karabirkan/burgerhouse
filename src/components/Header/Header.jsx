@@ -65,18 +65,21 @@ const Header = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Link className="burgerhouse" to={"/"}>
-        <LunchDiningIcon sx={{ mr: 1 }} color="success" fontSize="medium" />
-      </Link>{" "}
+        <LunchDiningIcon sx={{ mr: 1 }} color="success" fontSize="large" />
+      </Link>
       <Divider />
       <Typography
         color={"goldenrod"}
         variant="h6"
         component="div"
-        sx={{ flexGrow: 1, my: 2 }}
+        sx={{
+          flexGrow: 1,
+          my: 2,
+        }}
       >
         <Link className="burgerhouse" to={"/"}>
           Burger House
-        </Link>{" "}
+        </Link>
       </Typography>
       <ul className="mobile-navigation">
         <li>
@@ -115,6 +118,7 @@ const Header = () => {
           sx={{
             bgcolor: "white",
             boxShadow: 1,
+            p: 2,
           }}
         >
           <Toolbar>
@@ -122,10 +126,10 @@ const Header = () => {
               color="inherit"
               aria-label="open drawer"
               edge="start"
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{ mr: 2, display: { xs: "block", sm: "block", md: "none" } }}
               onClick={handleDrawerToggle}
             >
-              <MenuIcon />
+              <MenuIcon color="action" />
             </IconButton>
 
             <Typography
@@ -134,22 +138,28 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              <Link className="burgerhouse" to={"/"}>
-                <LunchDiningIcon
-                  sx={{ mr: 1 }}
-                  color="success"
-                  fontSize="medium"
-                />
-              </Link>
-              <Link className="burgerhouse" to={"/"}>
-                Burger House
-              </Link>
+              <Box sx={{ display: "flex" }}>
+                <Link className="burgerhouse" to={"/"}>
+                  <LunchDiningIcon
+                    sx={{ mr: 1 }}
+                    color="success"
+                    fontSize="medium"
+                  />
+                </Link>
+                <Link className="burgerhouse" to={"/"}>
+                  <Typography
+                    sx={{
+                      "@media(max-width:400px)": {
+                        fontSize: "0.6rem",
+                      },
+                    }}
+                  >
+                    Burger House
+                  </Typography>
+                </Link>
+              </Box>
             </Typography>
-            <Box
-              sx={{
-                display: { xs: "none", sm: "block" },
-              }}
-            >
+            <Box sx={{ display: { xs: "none", md: "block", lg: "block" } }}>
               <ul className="navigation-menu">
                 {/* <li>
                   <Link to={"/"}>Home</Link>
@@ -174,6 +184,12 @@ const Header = () => {
                 </li>
               </ul>
             </Box>
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ mr: "5px", display: { xs: "none", sm: "block" } }}
+            />
+
             <Box>
               <ul className="navigation-menu">
                 <li>
@@ -205,7 +221,9 @@ const Header = () => {
           </Drawer>
         </Box>
       </Box>
-      <Toolbar />
+      <Box sx={{ p: 3 }}>
+        <Toolbar />
+      </Box>
     </>
   );
 };
