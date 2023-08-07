@@ -1,38 +1,38 @@
 import Layout from "../components/Layout/Layout";
 import { Box, Typography } from "@mui/material";
+import AboutImage from "../images/about_img.jpg";
 const About = () => {
   return (
     <Layout>
-      <Box>
-        <Typography variant="h4">Welcome to Burger House!</Typography>
+      <Box
+        sx={{
+          my: 10,
+          textAlign: "center",
+          p: 3,
+          "& h4": { fontWeight: "700", my: 2, fontSize: "1.3rem" },
+          "& p": {
+            textAlign: "justify",
+            fontSize: "1rem",
+          },
+          "@media (max-width:600px)": { mt: 0, "& h4": { fontSize: "1.5rem" } },
+        }}
+      >
+        <Typography variant="h4"> Welcome to Burger</Typography>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum
-          eos quasi officia recusandae similique voluptate voluptatibus
-          provident velit iusto dolorem maiores laudantium modi reprehenderit
-          in, cum eius ducimus laborum minima, a excepturi, corporis quo culpa?
-          Alias assumenda magnam aperiam sapiente? Consectetur, expedita facere
-          doloremque amet ut minima, libero corporis, deleniti pariatur cum
-          sint. Expedita itaque dolore possimus quae earum dolorem veniam quo
-          accusantium perspiciatis ratione neque, at inventore sunt assumenda
-          architecto voluptas, accusamus doloribus, tempora eveniet eligendi
-          soluta vitae eum omnis? Quae, officiis quasi doloremque deleniti
-          exercitationem itaque incidunt totam voluptas debitis ullam
-          consectetur praesentium eligendi earum in quo enim?
-        </p>
-        <br />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          repudiandae libero expedita inventore quasi quos vero provident
-          dolores voluptas consectetur sint fuga enim alias maiores ex eveniet
-          quia quod pariatur nam excepturi saepe, corporis dicta amet.
-          Reprehenderit, ea? Libero consequatur ipsa corrupti, ut at excepturi
-          delectus ipsum eligendi id voluptatem ad laborum repellat provident
-          nulla optio fugiat deserunt omnis rerum doloribus tempora quaerat
-          recusandae culpa? Dicta distinctio maiores, tempora eaque sapiente
-          pariatur! Voluptas aliquid ad deserunt. Natus itaque reiciendis nam
-          accusantium atque repellat nesciunt harum maiores, ratione iure ab,
-          ducimus quisquam ea minus architecto aliquid aspernatur magni quod
-          quis dicta!
+          We're your go-to destination for mouthwatering, handcrafted burgers.
+          Our journey began with a passion for creating the perfect burger, and
+          that passion still drives us today. At Burger House, quality is
+          paramount. We source the freshest ingredients, from locally-raised
+          beef to artisanal buns. Our menu showcases a variety of burger
+          options, each a masterpiece of flavor and creativity. But we're more
+          than just burgers. Our hand-cut fries, made-to-order shakes, and
+          delightful sides complete your meal. Vegetarian? No problem – we have
+          options that cater to all tastes. Step into our cozy, modern space,
+          where every visit is a celebration. Our friendly staff ensures your
+          dining experience is top-notch, whether you're here for a quick bite
+          or a leisurely meal. Burger House isn't just a restaurant; it's a
+          destination for burger lovers. We're proud to share our passion and
+          flavors with you, one delicious bite at a time.
         </p>
       </Box>
     </Layout>
