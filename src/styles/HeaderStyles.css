@@ -15,6 +15,12 @@
   font-weight: 600;
   font-size: 1rem;
 }
+.navigation-menu li a:hover {
+  background-color: #81c700;
+  border-radius: 20%;
+  color: white;
+  transition: 0.3s;
+}
 
 .burgerhouse {
   text-decoration: none;
@@ -41,7 +47,6 @@
   color: black;
 }
 
-
 /* styles.css */
 img {
   max-width: 100%;
@@ -51,7 +56,6 @@ img {
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
   img {
-
     width: 100%;
   }
 }
@@ -61,4 +65,3 @@ img {
     width: 100%;
   }
 }
-
