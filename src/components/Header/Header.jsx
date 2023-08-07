@@ -117,8 +117,8 @@ const Header = () => {
           component={"nav"}
           sx={{
             bgcolor: "white",
-            boxShadow: 1,
-            p: 2,
+            boxShadow: 0,
+            p: 5,
           }}
         >
           <Toolbar>

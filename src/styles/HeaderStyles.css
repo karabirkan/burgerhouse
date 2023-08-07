@@ -40,3 +40,25 @@
   font-size: 1.4rem;
   color: black;
 }
+
+
+/* styles.css */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  img {
+
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  img {
+    width: 100%;
+  }
+}
+
