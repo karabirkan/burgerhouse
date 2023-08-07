@@ -13,7 +13,6 @@ export default function Footer() {
           bgcolor: "#000",
           color: "white",
           p: 3,
-          position: "fixed",
           bottom: 0,
           width: "100%",
         }}

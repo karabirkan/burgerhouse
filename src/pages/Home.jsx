@@ -56,18 +56,18 @@ export default function Home() {
       <Box
         sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}
       >
-        <div className="max-w-[2560px] h-[1440px] w-full m-auto py-16 px-4 relative group">
+        <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
           <img
             className=" rounded-2xl object-cover duration-500"
             src={slides[randomIndex()].url}
             alt=""
           />
 
-          <div className="group-hover:block absolute top-1/4 left-5 transform -translate-y-1/2 text-2xl rounded-full p-4 bg-black/20 text-white cursor-pointer">
-            <BsChevronCompactLeft onClick={prevSlide} size={20} />
+          <div className="group-hover:block absolute top-1/3 left-5 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+            <BsChevronCompactLeft onClick={prevSlide} size={30} />
           </div>
-          <div className="group-hover:block absolute top-1/4 right-5  transform -translate-y-1/2 text-2xl rounded-full p-4 bg-black/20 text-white cursor-pointer">
-            <BsChevronCompactRight onClick={nextSlide} size={20} />
+          <div className="group-hover:block absolute top-1/3 right-5 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+            <BsChevronCompactRight onClick={nextSlide} size={30} />
           </div>
         </div>
       </Box>
