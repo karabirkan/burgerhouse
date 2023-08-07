@@ -7,7 +7,17 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export default function Footer() {
   return (
     <>
-      <Box sx={{ textAlign: "center", bgcolor: "#000", color: "white", p: 3 }}>
+      <Box
+        sx={{
+          textAlign: "center",
+          bgcolor: "#000",
+          color: "white",
+          p: 3,
+          position: "fixed",
+          bottom: 0,
+          width: "100%",
+        }}
+      >
         <Box
           sx={{
             my: 3,

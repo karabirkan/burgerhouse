@@ -56,7 +56,7 @@ export default function Home() {
       <Box
         sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}
       >
-        <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
+        <div className="max-w-[2560px] h-[1440px] w-full m-auto py-16 px-4 relative group">
           <img
             className=" rounded-2xl object-cover duration-500"
             src={slides[randomIndex()].url}
